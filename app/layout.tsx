@@ -79,10 +79,6 @@ export const metadata: Metadata = {
     creator: "@andrewnady",
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/logo-square.png", type: "image/png" },
-    ],
     apple: [{ url: "/logo-square.png", sizes: "180x180" }],
   },
   robots: {
