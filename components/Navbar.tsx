@@ -10,6 +10,7 @@ const links = [
   { href: "#framework", label: "Framework" },
   { href: "#credibility", label: "Credibility" },
   { href: "#contact", label: "Contact" },
+  { href: "/upwork-book", label: "Book" },
 ];
 
 export default function Navbar() {

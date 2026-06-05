@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import BookBanner from "@/components/BookBanner";
 import ProfileCard from "@/components/ProfileCard";
 import OwnedProducts from "@/components/OwnedProducts";
 import Portfolio from "@/components/Portfolio";
@@ -30,6 +31,7 @@ export default function Home() {
       <Navbar />
       <main id="main">
         <Hero />
+        <BookBanner />
         <ProfileCard />
         <OwnedProducts />
         <Portfolio />
