@@ -17,7 +17,7 @@ import {
 import Reveal from "./Reveal";
 
 // TODO: Replace this URL with your Gumroad / Stripe / payment link
-const BUY_LINK = "https://andrewnady.gumroad.com/l/upwork-book";
+const BUY_LINK = "/checkout";
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -158,8 +158,6 @@ export default function BookPage() {
           >
             <a
               href={BUY_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-gold text-white px-8 py-4 text-sm font-medium shadow-gold hover:bg-gold-dark transition-all duration-300"
             >
               Get the Book ($29)
@@ -446,8 +444,6 @@ export default function BookPage() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href={BUY_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-gold text-white px-10 py-4 text-base font-medium shadow-gold hover:bg-gold-light transition-all duration-300"
               >
                 Get the Book ($29)
