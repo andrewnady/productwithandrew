@@ -64,21 +64,44 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@productwithandrew.com"
+                  href="mailto:info@productwithandrew.com"
                   className="inline-flex items-center gap-3 text-white/80 hover:text-gold transition-colors"
                 >
-                  <Mail size={16} /> hello@productwithandrew.com
+                  <Mail size={16} /> info@productwithandrew.com
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/10 text-xs text-white/45">
+        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-white/45">
           <p>
             © {new Date().getFullYear()} Product with Andrew LLC. All rights
             reserved. · 774-043-431
           </p>
+          <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <li>
+              <a
+                href="/privacy-policy"
+                className="hover:text-gold transition-colors"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/terms" className="hover:text-gold transition-colors">
+                Terms &amp; Conditions
+              </a>
+            </li>
+            <li>
+              <a
+                href="/refund-policy"
+                className="hover:text-gold transition-colors"
+              >
+                Refund Policy
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
