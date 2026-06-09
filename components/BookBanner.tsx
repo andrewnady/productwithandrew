@@ -138,7 +138,7 @@ export default function BookBanner() {
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
                   <a
-                    href="/checkout"
+                    href="/upwork-book"
                     className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold text-white px-7 py-4 text-sm font-medium shadow-gold hover:bg-gold-light transition-all duration-300"
                   >
                     Get the Book — $29
@@ -146,12 +146,6 @@ export default function BookBanner() {
                       size={16}
                       className="transition-transform group-hover:translate-x-1"
                     />
-                  </a>
-                  <a
-                    href="/upwork-book"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 text-white px-7 py-4 text-sm font-medium hover:bg-white/5 transition-all duration-300"
-                  >
-                    Learn more
                   </a>
                 </div>
               </div>
