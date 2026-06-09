@@ -27,7 +27,7 @@ export default function Contact() {
     );
 
     // Open the user's email client as a graceful no-backend fallback.
-    window.location.href = `mailto:hello@productwithandrew.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@productwithandrew.com?subject=${subject}&body=${body}`;
     setStatus("sent");
     form.reset();
   }
@@ -110,8 +110,8 @@ export default function Contact() {
               </button>
               <p className="text-xs text-ink/45 text-center">
                 Or email{" "}
-                <a className="underline" href="mailto:hello@productwithandrew.com">
-                  hello@productwithandrew.com
+                <a className="underline" href="mailto:info@productwithandrew.com">
+                  info@productwithandrew.com
                 </a>
               </p>
             </form>
