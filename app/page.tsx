@@ -31,8 +31,8 @@ export default function Home() {
       <Navbar />
       <main id="main">
         <Hero />
-        <BookBanner />
         <ProfileCard />
+        <BookBanner />
         <OwnedProducts />
         <Portfolio />
         <Framework />
