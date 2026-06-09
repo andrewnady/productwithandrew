@@ -82,6 +82,16 @@ export default function Contact() {
               onSubmit={onSubmit}
               className="card-surface p-6 md:p-8 space-y-5"
             >
+              {/* Honeypot — hidden from users, catches bots that fill every field */}
+              <input
+                type="checkbox"
+                name="botcheck"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
+
               <Field name="name" label="Name" placeholder="Your name" />
               <Field
                 name="email"
