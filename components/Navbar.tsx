@@ -11,7 +11,6 @@ const homeLinks = [
   { href: "#framework", label: "Framework" },
   { href: "#credibility", label: "Credibility" },
   { href: "#contact", label: "Contact" },
-  { href: "/upwork-book", label: "Book" },
 ];
 
 const pageLinks = [
@@ -73,16 +72,14 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {isHomePage && (
-          <a
-            href="https://calendly.com/andrewnady/30-min-consultation-call"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-ink text-white text-sm px-4 py-2 hover:bg-gold transition-colors duration-300"
-          >
-            Book a Call
-          </a>
-        )}
+        <a
+          href="https://calendly.com/andrewnady/30-min-consultation-call"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex items-center gap-2 rounded-full bg-ink text-white text-sm px-4 py-2 hover:bg-gold transition-colors duration-300"
+        >
+          Book a Call
+        </a>
 
         <button
           onClick={() => setOpen((v) => !v)}
@@ -111,18 +108,16 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          {isHomePage && (
-            <li>
-              <a
-                href="https://calendly.com/andrewnady/30-min-consultation-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-ink text-white text-sm px-4 py-2 mt-2"
-              >
-                Book a Call
-              </a>
-            </li>
-          )}
+          <li>
+            <a
+              href="https://calendly.com/andrewnady/30-min-consultation-call"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-ink text-white text-sm px-4 py-2 mt-2"
+            >
+              Book a Call
+            </a>
+          </li>
         </ul>
       </div>
     </header>

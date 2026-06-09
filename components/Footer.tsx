@@ -1,15 +1,6 @@
 import Image from "next/image";
 import { Linkedin, Mail, Briefcase } from "lucide-react";
 
-const navLinks = [
-  { href: "#products", label: "Products" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#framework", label: "Framework" },
-  { href: "#credibility", label: "Credibility" },
-  { href: "#contact", label: "Contact" },
-  { href: "/upwork-book", label: "Book" },
-];
-
 export default function Footer() {
   return (
     <footer className="relative bg-ink text-white">
@@ -42,25 +33,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="md:col-span-3">
-            <h4 className="text-xs uppercase tracking-[0.2em] text-white/40">
-              Navigate
-            </h4>
-            <ul className="mt-5 space-y-3">
-              {navLinks.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    className="text-sm text-white/80 hover:text-gold transition-colors"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="md:col-span-4">
+          <div className="md:col-span-4 md:col-start-9">
             <h4 className="text-xs uppercase tracking-[0.2em] text-white/40">
               Connect
             </h4>
