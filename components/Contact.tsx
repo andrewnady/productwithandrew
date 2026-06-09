@@ -9,27 +9,34 @@ export default function Contact() {
     "idle"
   );
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  const WEB3FORMS_ACCESS_KEY = "09e5f077-0b18-41ea-9aef-93b1b91095bd";
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
 
     const form = e.currentTarget;
     const data = new FormData(form);
-    const name = String(data.get("name") || "");
-    const email = String(data.get("email") || "");
-    const message = String(data.get("message") || "");
+    data.append("access_key", WEB3FORMS_ACCESS_KEY);
+    data.append("subject", "New inquiry from productwithandrew.com");
+    data.append("from_name", "Product With Andrew — Website");
 
-    const subject = encodeURIComponent(
-      `New inquiry from ${name || "the website"}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`
-    );
-
-    // Open the user's email client as a graceful no-backend fallback.
-    window.location.href = `mailto:info@productwithandrew.com?subject=${subject}&body=${body}`;
-    setStatus("sent");
-    form.reset();
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      const result = await res.json();
+      if (result.success) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -96,8 +103,10 @@ export default function Contact() {
               >
                 {status === "sent" ? (
                   <>
-                    <CheckCircle2 size={16} /> Sent — check your email
+                    <CheckCircle2 size={16} /> Message sent — thank you!
                   </>
+                ) : status === "sending" ? (
+                  <>Sending…</>
                 ) : (
                   <>
                     Send Message
@@ -108,6 +117,11 @@ export default function Contact() {
                   </>
                 )}
               </button>
+              {status === "error" && (
+                <p className="text-xs text-red-600 text-center">
+                  Something went wrong. Please try again or email us directly.
+                </p>
+              )}
               <p className="text-xs text-ink/45 text-center">
                 Or email{" "}
                 <a className="underline" href="mailto:info@productwithandrew.com">
