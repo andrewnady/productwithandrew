@@ -49,13 +49,12 @@ export default function Navbar() {
           aria-label="Product With Andrew — Home"
         >
           <Image
-            src="/logo.png"
+            src="/logo-wordmark-black.svg"
             alt="Product With Andrew — Product Strategy & Launch Studio"
-            width={640}
-            height={640}
+            width={1167}
+            height={302}
             priority
-            quality={100}
-            className="h-24 md:h-28 w-auto object-contain"
+            className="h-11 md:h-14 w-auto object-contain"
           />
         </a>
 

@@ -11,15 +11,14 @@ export default function Footer() {
             <a
               href="/"
               aria-label="Product With Andrew — Home"
-              className="bg-white inline-flex items-center rounded-2xl px-2 py-2"
+              className="inline-flex items-center"
             >
               <Image
-                src="/logo.png"
+                src="/logo-wordmark-white.svg"
                 alt="Product With Andrew — Product Strategy & Launch Studio"
-                width={640}
-                height={640}
-                quality={100}
-                className="h-28 md:h-32 w-auto object-contain"
+                width={1167}
+                height={302}
+                className="h-14 md:h-16 w-auto object-contain"
               />
             </a>
             <p className="mt-5 max-w-md text-sm text-white/60 leading-relaxed">
