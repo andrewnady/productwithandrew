@@ -46,6 +46,18 @@ body {
   background: linear-gradient(90deg, #c9a96e 0%, rgba(201, 169, 110, 0) 100%);
 }
 
+/* When scripting is unavailable, framer-motion never animates elements into
+   view — force them visible so content is readable without JS. */
+@media (scripting: none) {
+  *,
+  *::before,
+  *::after {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
+
 /* Noise overlay */
 .noise::before {
   content: "";

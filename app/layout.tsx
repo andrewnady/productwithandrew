@@ -212,6 +212,18 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {/* Without JS, framer-motion can't animate elements from opacity:0 to
+            visible. Force everything visible so the site is readable for
+            no-JS visitors and crawlers. */}
+        <noscript>
+          <style>{`
+            *, *::before, *::after {
+              opacity: 1 !important;
+              transform: none !important;
+              visibility: visible !important;
+            }
+          `}</style>
+        </noscript>
         {children}
         <Script
           id="ld-json-graph"
