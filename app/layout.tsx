@@ -78,9 +78,6 @@ export const metadata: Metadata = {
     images: ["/logo-square.png"],
     creator: "@andrewnady",
   },
-  icons: {
-    apple: [{ url: "/logo-square.png", sizes: "180x180" }],
-  },
   robots: {
     index: true,
     follow: true,
