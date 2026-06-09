@@ -8,7 +8,11 @@ export default function Footer() {
       <div className="container-x py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="bg-white inline-flex items-center rounded-2xl px-2 py-2">
+            <a
+              href="/"
+              aria-label="Product With Andrew — Home"
+              className="bg-white inline-flex items-center rounded-2xl px-2 py-2"
+            >
               <Image
                 src="/logo.png"
                 alt="Product With Andrew — Product Strategy & Launch Studio"
@@ -17,7 +21,7 @@ export default function Footer() {
                 quality={100}
                 className="h-28 md:h-32 w-auto object-contain"
               />
-            </div>
+            </a>
             <p className="mt-5 max-w-md text-sm text-white/60 leading-relaxed">
               A product strategy & launch studio led by Andrew Nady. Turning
               ambitious ideas into shipped, scalable products — from 0 to
