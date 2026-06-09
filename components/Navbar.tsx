@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-const links = [
+const homeLinks = [
   { href: "#products", label: "Products" },
   { href: "#portfolio", label: "Portfolio" },
   { href: "#framework", label: "Framework" },
@@ -13,7 +14,16 @@ const links = [
   { href: "/upwork-book", label: "Book" },
 ];
 
+const pageLinks = [
+  { href: "/", label: "Home" },
+  { href: "/upwork-book", label: "Book" },
+];
+
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+  const links = isHomePage ? homeLinks : pageLinks;
+
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -34,7 +44,7 @@ export default function Navbar() {
     >
       <nav className="container-x flex h-24 md:h-28 items-center justify-between">
         <a
-          href="#top"
+          href="/"
           className="flex items-center group -my-2"
           aria-label="Product With Andrew — Home"
         >
@@ -63,14 +73,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a
-          href="https://calendly.com/andrewnady/30-min-consultation-call"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 rounded-full bg-ink text-white text-sm px-4 py-2 hover:bg-gold transition-colors duration-300"
-        >
-          Book a Call
-        </a>
+        {isHomePage && (
+          <a
+            href="https://calendly.com/andrewnady/30-min-consultation-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-ink text-white text-sm px-4 py-2 hover:bg-gold transition-colors duration-300"
+          >
+            Book a Call
+          </a>
+        )}
 
         <button
           onClick={() => setOpen((v) => !v)}
@@ -99,16 +111,18 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="https://calendly.com/andrewnady/30-min-consultation-call"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-ink text-white text-sm px-4 py-2 mt-2"
-            >
-              Book a Call
-            </a>
-          </li>
+          {isHomePage && (
+            <li>
+              <a
+                href="https://calendly.com/andrewnady/30-min-consultation-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-ink text-white text-sm px-4 py-2 mt-2"
+              >
+                Book a Call
+              </a>
+            </li>
+          )}
         </ul>
       </div>
     </header>
