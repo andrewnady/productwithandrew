@@ -141,7 +141,7 @@ export default function BookBanner() {
                     href="/upwork-book"
                     className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold text-white px-7 py-4 text-sm font-medium shadow-gold hover:bg-gold-light transition-all duration-300"
                   >
-                    Get the Book — $29
+                    Learn More
                     <ArrowRight
                       size={16}
                       className="transition-transform group-hover:translate-x-1"
