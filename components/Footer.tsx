@@ -77,7 +77,7 @@ export default function Footer() {
         <div className="mt-14 pt-8 border-t border-white/10 text-xs text-white/45">
           <p>
             © {new Date().getFullYear()} Product with Andrew LLC. All rights
-            reserved.
+            reserved. · 774-043-431
           </p>
         </div>
       </div>
