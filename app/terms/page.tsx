@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
     "Terms & Conditions for purchasing and using digital products from Product with Andrew LLC.",
-  alternates: { canonical: "https://productwithandrew.com/terms" },
+  alternates: {
+    canonical: "https://productwithandrew.com/terms",
+    languages: {
+      "en-US": "https://productwithandrew.com/terms",
+      "x-default": "https://productwithandrew.com/terms",
+    },
+  },
 };
 
 export default function Terms() {

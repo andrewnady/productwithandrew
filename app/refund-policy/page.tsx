@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   title: "Refund Policy",
   description:
     "14-day money-back guarantee on digital products from Product with Andrew LLC.",
-  alternates: { canonical: "https://productwithandrew.com/refund-policy" },
+  alternates: {
+    canonical: "https://productwithandrew.com/refund-policy",
+    languages: {
+      "en-US": "https://productwithandrew.com/refund-policy",
+      "x-default": "https://productwithandrew.com/refund-policy",
+    },
+  },
 };
 
 export default function RefundPolicy() {

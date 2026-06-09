@@ -14,7 +14,13 @@ export const metadata: Metadata = {
   title: "Product With Andrew — Product Strategy & Launch Studio",
   description:
     "Product With Andrew is a Product Strategy & Launch Studio led by Andrew Nady. AI products, SaaS, marketplaces and platforms — from idea validation to launch and growth.",
-  alternates: { canonical: "https://productwithandrew.com" },
+  alternates: {
+    canonical: "https://productwithandrew.com",
+    languages: {
+      "en-US": "https://productwithandrew.com",
+      "x-default": "https://productwithandrew.com",
+    },
+  },
 };
 
 export default function Home() {

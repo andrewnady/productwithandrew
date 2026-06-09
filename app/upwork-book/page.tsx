@@ -19,7 +19,13 @@ export const metadata: Metadata = {
     "Upwork Top Rated Plus",
     "Andrew Nady Upwork",
   ],
-  alternates: { canonical: "https://productwithandrew.com/upwork-book" },
+  alternates: {
+    canonical: "https://productwithandrew.com/upwork-book",
+    languages: {
+      "en-US": "https://productwithandrew.com/upwork-book",
+      "x-default": "https://productwithandrew.com/upwork-book",
+    },
+  },
   openGraph: {
     title: "Zero to Six Figures on Upwork — Andrew Nady",
     description:

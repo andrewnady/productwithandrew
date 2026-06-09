@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy Policy for Product with Andrew LLC — how we collect, use, and protect your information.",
-  alternates: { canonical: "https://productwithandrew.com/privacy-policy" },
+  alternates: {
+    canonical: "https://productwithandrew.com/privacy-policy",
+    languages: {
+      "en-US": "https://productwithandrew.com/privacy-policy",
+      "x-default": "https://productwithandrew.com/privacy-policy",
+    },
+  },
 };
 
 export default function PrivacyPolicy() {
