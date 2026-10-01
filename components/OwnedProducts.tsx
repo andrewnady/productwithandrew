@@ -28,7 +28,7 @@ const owned = [
     region: "Marsa Alam · Red Sea",
     blurb:
       "Desert & marine safari experiences in Marsa Alam — guided tours, bookings and operations end-to-end.",
-    logo: "/logos/marsa-alam-safari.svg",
+    logo: "/logos/marsa-alam-safari.png",
   },
 ];
 
