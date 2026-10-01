@@ -22,6 +22,14 @@ const owned = [
       "End-to-end adventure tourism brand connecting visitors to curated experiences in Sharm El Sheikh.",
     logo: "/logos/sharm-safari.png",
   },
+  {
+    name: "Marsa Alam Safari",
+    href: "https://www.marsaalamsafari.com",
+    region: "Marsa Alam · Red Sea",
+    blurb:
+      "Desert & marine safari experiences in Marsa Alam — guided tours, bookings and operations end-to-end.",
+    logo: "/logos/marsa-alam-safari.svg",
+  },
 ];
 
 export default function OwnedProducts() {

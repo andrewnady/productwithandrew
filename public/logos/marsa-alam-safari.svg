@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1a1a"/>
+      <stop offset="1" stop-color="#0b0b0a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e3c98f"/>
+      <stop offset="1" stop-color="#c9a96e"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#sky)"/>
+  <circle cx="256" cy="212" r="78" fill="url(#gold)"/>
+  <!-- dunes -->
+  <path d="M0 330 Q128 288 256 322 T512 318 V512 H0 Z" fill="#c9a96e" opacity="0.92"/>
+  <path d="M0 372 Q140 334 280 368 T512 360 V512 H0 Z" fill="#8a6a20" opacity="0.9"/>
+  <!-- camel silhouette -->
+  <g fill="#0b0b0a">
+    <path d="M300 352 q6-22 18-26 q4-14 14-12 q6 1 7 9 q10 2 12 12 l6 30 h-10 l-5-24 q-8 2-16 1 l-4 23 h-10 l3-21 q-10 2-16 11 l-3 14 h-10 z"/>
+  </g>
+  <text x="256" y="452" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" letter-spacing="2" fill="#f5f0e6">MARSA ALAM</text>
+</svg>
